@@ -148,3 +148,8 @@ export default App;
 ```
 this.setState({message: 'Hello'}, () => { console.log(this.state.message) })
 ```
+
+
+
+### Về redux và middleware
+- dispatch truyền lên 1 obj gồm type action và data để producer có thể xử lý update state.Nhưng nếu dữ liệu cần lấy từ api thì cần phải thông qua middleware(thunk, saga).Middleware sẽ nhận vào 1 callbackFunction chứa dispatch.Callback function này sẽ call api hay thực hiện các tác vụ để lấy được data về sau đó mới dipatch obj chứa action và data cho producer xử lý
